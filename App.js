@@ -33,5 +33,5 @@ class SettingsScreen extends React.Component {
 
 export default createBottomTabNavigator({
   Home: HomeScreen,
-  Settings: SettingsScreen,
+  Scanner: SettingsScreen,
 });
