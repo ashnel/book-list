@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { BarCodeScanner, Permissions } from 'expo';
+import { WebView } from 'react-native';
+
 
 export default class BarcodeScannerISBN extends React.Component {
   state = {
@@ -32,16 +34,15 @@ export default class BarcodeScannerISBN extends React.Component {
   }
 
   _handleBarCodeRead = ({ type, data }) => {
+    console.log('hello')
     // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
-    var hello = `https://www.goodreads.com/book/isbn/${data}?callback=data&format=json&user_id=82239334`;
-    var scriptTag = "https://www.goodreads.com/book/isbn/0441172717?callback=myCallback&format=json&user_id=82239334";
-    fetch("https://www.goodreads.com/book/isbn/0441172717?callback=myCallback&format=json&user_id=82239334")
-    .then(response => {
-      console.log(response);
-      return response.json();
-    })
-    .then(responseJson => {
-      this.setState({ data: responseJson });
-    })
+    // fetch(`https://idreambooks.com/api/books/reviews.json?q=${data}&key=5157f97212fe5ad1cfaba7706185beb054cd388a`)
+    // .then(response => {
+    //   console.log(response.json());
+    //   return response.json();
+    // })
+    // .then(responseJson => {
+    //   this.setState({ data: responseJson });
+    // })
   }
 }

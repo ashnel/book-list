@@ -1,13 +1,36 @@
-import React, { Component } from 'react';
-import { WebView } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
+import { createBottomTabNavigator } from 'react-navigation';
+import Scanner from './screens/ScannerScreen';
+import {WebView} from 'react-native';
+import Widget from './assets/widget/index.html'
 
-class MyWeb extends React.Component {
+class HomeScreen extends React.Component {
+  // render() {
+  //   return (
+  //     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+  //       <Text>Home!!</Text>
+  //     </View>
+  //   );
+  // }
+  render()
+  {
+    return (
+      <WebView 
+      source={Widget} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}/>
+    )
+  }
+}
+
+class SettingsScreen extends React.Component {
   render() {
     return (
-      <WebView
-        source={{uri: 'https://github.com/facebook/react-native'}}
-        style={{marginTop: 20}}
-      />
+      <Scanner />
     );
   }
 }
+
+export default createBottomTabNavigator({
+  Home: HomeScreen,
+  Settings: SettingsScreen,
+});
