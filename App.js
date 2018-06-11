@@ -6,20 +6,21 @@ import {WebView} from 'react-native';
 import Widget from './assets/widget/index.html'
 
 class HomeScreen extends React.Component {
-  // render() {
-  //   return (
-  //     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-  //       <Text>Home!!</Text>
-  //     </View>
-  //   );
-  // }
-  render()
-  {
+  render() {
     return (
-      <WebView 
-      source={Widget} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}/>
-    )
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Home!!</Text>
+      </View>
+    );
   }
+  // Comment the above render and uncomment the below render to view example page of reviews
+  render()
+  // {
+  //   return (
+  //     <WebView 
+  //     source={Widget} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}/>
+  //   )
+  // }
 }
 
 class SettingsScreen extends React.Component {
