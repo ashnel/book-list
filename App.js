@@ -1,37 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { createBottomTabNavigator } from 'react-navigation';
 import Scanner from './screens/ScannerScreen';
-import {WebView} from 'react-native';
-import Widget from './assets/widget/index.html'
+import { WebView } from 'react-native';
+import Widget from './assets/widget/index.html';
+import Navigation from './navigation';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!!</Text>
-      </View>
-    );
-  }
-  // Comment the above render and uncomment the below render to view example page of reviews
-  render()
-  // {
-  //   return (
-  //     <WebView 
-  //     source={Widget} style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}/>
-  //   )
-  // }
-}
+const App = () => {
+  return <Navigation />;
+};
 
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <Scanner />
-    );
-  }
-}
-
-export default createBottomTabNavigator({
-  Home: HomeScreen,
-  Scanner: SettingsScreen,
-});
+export default App;
