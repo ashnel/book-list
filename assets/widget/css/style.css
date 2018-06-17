@@ -9,6 +9,7 @@
     font-size: 16px;
     border-bottom: 1px solid #BBB596;
     margin-bottom: 0;
+    background-color: 'red';
 }
 
 #goodreads-widget a {
