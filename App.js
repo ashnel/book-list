@@ -14,7 +14,7 @@ class HomeScreen extends React.Component {
     );
   }
   // Comment the above render and uncomment the below render to view example page of reviews
-  render()
+  // render()
   // {
   //   return (
   //     <WebView 
