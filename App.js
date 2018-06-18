@@ -6,7 +6,9 @@ import Widget from './assets/widget/index.html';
 import Navigation from './navigation';
 
 const App = () => {
-  return <Navigation />;
+  return (
+    <Navigation />
+  );
 };
 
 export default App;
