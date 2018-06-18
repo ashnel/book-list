@@ -9,6 +9,7 @@ import {
 import { BarCodeScanner, Permissions } from "expo";
 import Widget from "../../assets/widget/index.html";
 import styles from "./styles";
+import { Header } from "react-native-elements";
 
 export default class BarcodeScannerISBN extends React.Component {
   state = {
@@ -58,8 +59,16 @@ export default class BarcodeScannerISBN extends React.Component {
     return (
       <BarCodeScanner
         onBarCodeRead={this._handleBarCodeRead}
-        style={StyleSheet.absoluteFill}
-      />
+        style={[StyleSheet.absoluteFill, styles.container]}
+      >
+        <View style={styles.layerTop} />
+        <View style={styles.layerCenter}>
+          <View style={styles.layerLeft} />
+          <View style={styles.focused} />
+          <View style={styles.layerRight} />
+        </View>
+        <View style={styles.layerBottom} />
+      </BarCodeScanner>
     );
   };
 
