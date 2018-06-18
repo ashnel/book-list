@@ -70,7 +70,7 @@ export default class BarcodeScannerISBN extends React.Component {
       <div id="gr_header">
           <h1><a rel="nofollow" href=\"https://www.goodreads.com/book/isbn_to_id/${isbn}\">Reviews</a></h1>
       </div>
-      <iframe id="the_iframe" src="https://www.goodreads.com/api/reviews_widget_iframe?did=DEVELOPER_ID&amp;format=html&amp;isbn=${isbn}&amp;links=660&amp;review_back=fff&amp;stars=000&amp;text=000" width="565" height="400" frameborder="0"></iframe>
+      <iframe id="the_iframe" src="https://www.goodreads.com/api/reviews_widget_iframe?did=DEVELOPER_ID&amp;format=html&amp;isbn=${isbn}&amp;links=660&amp;review_back=fff&amp;stars=000&amp;text=000" width="100%" height="100%" frameborder="0"></iframe>
     </div>`}} 
     style={styles.webView} 
     />;
